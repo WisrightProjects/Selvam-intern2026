@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+    }
+    .container {
+      width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #333;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Login</h2>
+
+  <form id="loginForm" novalidate>
+    
+    <!-- Email -->
+    <input type="email" id="email" placeholder="Email">
+    <div id="emailError" class="error"></div>
+
+    <!-- Password -->
+    <input type="password" id="password" placeholder="Password">
+    <div id="passwordError" class="error"></div>
+
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById("loginForm");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // stop default submission
+
+    let isValid = true;
+
+    // Get values
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+    // Clear old errors
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("passwordError").innerText = "";
+
+    // Email validation
+    if (email === "") {
+      document.getElementById("emailError").innerText = "Email is required";
+      isValid = false;
+    } else if (!email.includes("@")) {
+      document.getElementById("emailError").innerText = "Enter a valid email";
+      isValid = false;
+    }
+
+    // Password validation
+    if (password === "") {
+      document.getElementById("passwordError").innerText = "Password is required";
+      isValid = false;
+    } else if (password.length < 6) {
+      document.getElementById("passwordError").innerText = "Minimum 6 characters required";
+      isValid = false;
+    }
+
+    // If valid → submit form (simulate)
+    if (isValid) {
+      alert("Login successful!");
+      // You can send data using fetch() or AJAX here
+    }
+  });
+</script>
+
+</body>
+</html>
