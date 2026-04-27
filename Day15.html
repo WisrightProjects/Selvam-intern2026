@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Portfolio</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;  
+            flex-wrap: wrap;            
+            justify-content: space-between; 
+            align-items: center;        
+            padding: 10px 20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+        }
+
+        .nav-links {
+            display: flex;              
+            list-style: none;
+            gap: 20px;
+        }
+        /* Toggle menu hide */
+        .toggle{
+            display: none;
+        }
+        /* SIDE NAVBAR STYLE */
+        .side-navbar-parent{
+            background-color: orange;
+            width: 50%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            padding: 10px;
+            display: block;
+            transition: 2s;
+            right: 120%;
+        }
+        .side-nav{
+            overflow: hidden;
+            text-decoration: none;
+        }
+        /* nav-links style */
+        .side-nav{
+            padding: 20px;
+            text-decoration: none;
+            display: grid;
+            color: white;
+            font-weight: 800;
+            font-size: 20px;  
+        }
+        .side-nav:hover{
+            cursor: pointer;
+            text-decoration: underline;
+            transform: scale(1.0);
+        }
+
+        .head{
+            color: orange;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: grey;
+        }
+
+        .nav-links a:hover{
+            color: orange;
+        }
+
+        /* Main Section */
+        #main-content{
+            margin-top: 50px;
+            padding: 60px;
+        }
+
+        /* HERO SECTION */
+        #hero {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse; 
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+        }
+
+        /* Image */
+        .img {
+            width: 400px;
+            border-radius: 10px;
+        }
+
+        /* Content */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+        }
+    
+        #pro-btn ,#pro-btn1 , #pro-btn2 , #pro-btn3{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            margin-top: 40px;
+            margin-left: 160px;
+            width: 200px;
+            height: 5vh;
+            border: solid 1px;
+            border-radius: 8px;
+            background-color: black;
+            color: white;
+            font-size: medium;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }           
+        #pro-btn:hover , #pro-btn1:hover , #pro-btn2:hover , #pro-btn3:hover{
+            background-color: orange;
+            color: aliceblue;
+            transform: scale(1.05);
+     }  
+
+     /* Meadia Query */
+     @media screen and (max-width:600px){
+        body{
+            background-color:  black;
+            color: white;
+            display: grid;
+            grid-template-columns: max-content(500px,1fr);
+        }
+        .toggle{
+            font-size: 25px;
+            cursor: pointer;
+            display: block;
+        }
+        .nav-links li:not(.toggle){
+            display: none;
+        }
+     }
+
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <h1 class="head">My Portfolio</h1>
+
+    <ul class="nav-links">
+         <li><a href="Day15.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="certificate.html">Certificate</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+  <!-- <i class="fa-solid fa-xmark"></i> -->
+        <div class="toggle">
+            <i class="fa-solid fa-bars" onclick="Showenavbar()"></i>
+        </div>
+    </ul>
+</header>
+                   <!-- SIDE NAVBAR -->
+<nav class="side-navbar-parent" onclick="Closenavbar()">
+      <p id="x-mark" style="text-align: right;">
+        <i class="fa-solid fa-xmark" id="x-mark"></i>
+      </p>
+       <li><a class="side-nav" href="Day15.html">Home</a></li>
+        <li><a class="side-nav" href="project.html">Projects</a></li>
+        <li><a class="side-nav" href="certificate.html">Certificate</a></li>
+        <li><a class="side-nav" href="Skills.html">Skills</a></li>
+        <li><a class="side-nav" href="contact.html">Contact</a></li>
+</nav>
+
+<!-- Main Content -->
+<main id="main-content">
+
+    <div id="hero">
+
+        <!-- Image -->
+        <div>
+            <img class="img" src="IMG-20230901-WA0003 - Copy.jpg" alt="photo">
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <h3>Hi, I'M Selvam S</h3>
+
+            <h1>I'M A FULL STACK <br> DEVELOPER</h1>
+
+            <p>
+                A full-stack developer builds and manages both 
+                the front-end (UI) and back-end (server, database) 
+                of a web application.
+            </p>
+
+            <button id="pro-btn" onclick="projects()">View My Project</button>
+            <button id="pro-btn1" onclick="certificate()">View My Certificate</button>
+            <button id="pro-btn2" onclick="Skills()">Skills</button>
+            <button id="pro-btn3" onclick="con()">Contact</button>
+        </div>
+    </div>  
+</main>
+
+<script>
+    //Adding button click the page move to another page
+    // Selecting the button
+    const hero = document.getElementById("hero")
+    const project = document.getElementById("pro-btn")
+    const certificates = document.getElementById("pro-btn1")
+    const skills = document.getElementById("pro-btn2")
+    const contact = document.getElementById("pro-btn3")
+
+    const projects = ()=>{
+        project = window.location = "project.html";
+    }
+    const certificate = () =>{
+       certificates = window.location  = "certificate.html";
+    }
+    const Skills = ()=>{
+       Skills = window.location = "skills.html";
+    }
+    const con = () =>{
+        contact = window.location = "contact.html";
+    }
+    //Side navbar script
+    const navbar = document.querySelector(".side-navbar-parent")
+
+    //create two function
+    const Showenavbar = () =>{
+        navbar.style.right = "0"
+    }
+    const Closenavbar = () => {
+        navbar.style.right = "120%"  
+    }
+</script>
+
+</body>
+</html>
