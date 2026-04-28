@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Portfolio</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;  
+            flex-wrap: wrap;            
+            justify-content: space-between; 
+            align-items: center;        
+            padding: 10px 20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+        }
+
+        .nav-links {
+            display: flex;              
+            list-style: none;
+            gap: 20px;
+        }
+        /* Toggle menu hide */
+        .toggle{
+            display: none;
+        }
+        /* SIDE NAVBAR STYLE */
+        .side-navbar-parent{
+            background-color: orange;
+            width: 50%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            padding: 10px;
+            display: block;
+            transition: 2s;
+            right: 120%;
+        }
+        .side-nav{
+            overflow: hidden;
+            text-decoration: none;
+        }
+        /* nav-links style */
+        .side-nav{
+            padding: 20px;
+            text-decoration: none;
+            display: grid;
+            color: white;
+            font-weight: 800;
+            font-size: 20px;  
+        }
+        .side-nav:hover{
+            cursor: pointer;
+            text-decoration: underline;
+            transform: scale(1.0);
+        }
+
+        .head{
+            color: orange;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: grey;
+        }
+
+        .nav-links a:hover{
+            color: orange;
+        }
+
+        /* Main Section */
+        #main-content{
+            margin-top: 50px;
+            padding: 60px;
+        }
+
+        /* HERO SECTION */
+        #hero {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse; /* 🔥 main change */
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+        }
+
+        /* Image */
+        .img {
+            width: 400px;
+            border-radius: 10px;
+        }
+
+        /* Content */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+        }
+
+        #pro-btn ,#pro-btn1 , #pro-btn2 , #pro-btn3{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            margin-top: 40px;
+            margin-left: 160px;
+            width: 200px;
+            height: 5vh;
+            border: solid 1px;
+            border-radius: 8px;
+            background-color: black;
+            color: white;
+            font-size: medium;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }           
+        #pro-btn:hover , #pro-btn1:hover , #pro-btn2:hover , #pro-btn3:hover{
+            background-color: orange;
+            color: aliceblue;
+            transform: scale(1.05);
+     }  
+     /* Project boxes */
+     .project{
+        margin-top: 20px;
+        padding: 10px;
+        text-align: center;
+     }
+     /* .Project-parent{
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       grid-gap: 20px;
+       padding: 20px;
+       align-items: center;
+       border: solid 1px;
+     } */
+      .Project-parent{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-basis: auto;
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+        justify-content: space-evenly;
+      }
+     /* .Project-parent:hover{
+         box-shadow: 20px;
+         transition: 2s;
+         transform: scale(1.1);
+     } */
+     .child-project{
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       justify-content: center;
+       gap: 8px;
+       background-color: aliceblue;
+       border: solid 0px;
+       border-radius: 10px;
+     }
+     .img-project{
+        width: 400px;
+        padding: 20px;
+        /* position: relative; */
+        /* margin-left: 8%;   */
+     }
+     /* Button style */
+     .btn11{
+       padding: 10px;
+       display: flex;
+       justify-content: center;
+       gap: 20px;
+     }
+    
+     .viwe{
+        width: 150px;
+        height: 4vh;   
+        border: solid  1px;
+        border-radius: 3px; 
+        background-color: orange;
+        color: black;
+        font-size: medium;
+     
+    }
+     .viwe:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 2s;
+        background-color: burlywood;
+     }
+     .git-btn{
+        width: 150px;
+        height: 4vh;   
+        border: solid  1px;
+        border-radius: 3px; 
+        background-color: cadetblue;
+     
+     }
+     .git-btn:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 2s;
+        background-color: blanchedalmond;
+     }
+
+     /* Backend styling */
+     .over-backend{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 4%;
+        justify-content: center;
+        align-items: center;
+     }
+     .backend-parent{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        gap: 20px;
+        position: relative;
+        
+     }
+     .backend-child{
+        margin-top: 20px;
+        background-color: antiquewhite;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 10px;
+     }
+    .backend-heading{
+        margin-top: 30px;
+        text-align: center;
+    }
+     .back-img{
+        width: 400px;
+        padding: 20px;
+        border-radius: 3px;
+     }
+     /* Last button */
+     .home-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+}
+     .home-btn{
+        width: 500px;
+        padding: 10px;
+        margin: 25px 0px 30px 0px;
+        border-radius: 5px;
+        border: 0;
+        background-color:  orange;
+        color: white;
+     }
+     .anger{
+         text-decoration: none;
+         overflow: hidden;
+         font-size: medium;
+         color: white;
+     }
+     .home-btn:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: 2s;
+        background-color: black;
+        color: white;
+     }
+
+
+        /* Meadia Query */
+     @media screen and (max-width:768px){
+        body{
+            background-color:  black;
+            color: white;
+            display: grid;
+            grid-template-columns: max-content(500px,1fr);
+        }
+        .toggle{
+            font-size: 25px;
+            cursor: pointer;
+            display: block;
+        }
+        .nav-links li:not(.toggle){
+            display: none;
+        }
+        .img-project{
+            margin-right: 10%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
+        .back-img1{
+            margin-right: 10%;
+        }
+        .project{
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+       .Project-parent{
+        color: black;
+        margin-top: 10px;
+        width: 20px;
+        display: flex;
+        flex-wrap: wrap;
+       }
+    }
+    @media(max-width:768px){
+        .Project-parent{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-basis: auto;
+            flex-grow: 10px;
+        }
+
+        /* backend */
+        .backend-parent{
+            color: black;
+            display: grid;
+        }
+        .home-btn{
+            width: 300px;
+        }
+    }
+   
+
+    </style>
+</head>
+
+<body>
+<header class="navbar">
+    <h1 class="head">My Portfolio</h1>
+
+    <ul class="nav-links">
+         <li><a href="Day15.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="certificate.html">Certificate</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+  <!-- <i class="fa-solid fa-xmark"></i> -->
+        <div class="toggle">
+            <i class="fa-solid fa-bars" onclick="Showenavbar()"></i>
+        </div>
+    </ul>
+</header>
+                   <!-- SIDE NAVBAR -->
+<nav class="side-navbar-parent" onclick="Closenavbar()">
+      <p id="x-mark" style="text-align: right;">
+        <i class="fa-solid fa-xmark" id="x-mark"></i>
+      </p>
+       <li><a class="side-nav" href="Day15.html">Home</a></li>
+        <li><a class="side-nav" href="project.html">Projects</a></li>
+        <li><a class="side-nav" href="certificate.html">Certificate</a></li>
+        <li><a class="side-nav" href="Skills.html">Skills</a></li>
+        <li><a class="side-nav" href="contact.html">Contact</a></li>
+</nav>
+<!-- Creating project container -->
+<h1 class="project">FRONTEND PROJECT</h1>
+<main class="Project-parent">
+      <div class="child-project">
+            <P>Project Name : <strong>Cookpad.com</strong></P>
+            <p>Technologies used : <strong>HTML , CSS , JAVA SCRIPT</strong></p>
+            <img class="img-project" src="cookpad.jpg" alt="image">
+            <div class="btn11">
+                <button class="viwe">View Project</button>
+                <button class="git-btn">Git Code</button>
+            </div>
+      </div>
+      <!-- 2-nd project -->
+       <div class="child-project">
+        <p>Project Name : <strong>SK Group of Company</strong></p>
+        <p>Technologies used : <strong>HTML ,CSS ,JAVA SCRIPT</strong></p>
+        <img class="img-project" src="bdfec8ea-4c23-4de6-9862-243b09329b43-750x422.jpg" alt="">
+         <div class="btn11">
+                <button class="viwe">View Project</button>
+                <button class="git-btn">Git Code</button>
+            </div>
+       </div>
+
+       <div class="child-project">
+            <p>Project Name : <strong>Coll Time</strong></p>
+            <p>Technologies Used : <strong>HTML , CSS ,JAVA SCRIPT , REACT.JS</strong></p>
+            <img class="img-project" src="OIP.jpg" alt="image">
+             <div class="btn11">
+                <button  class="viwe" onclick="button()">View Project</button>
+                <button class="git-btn">Git Code</button>
+            </div>
+       </div>
+        </div>
+</main>
+<hr>
+<hr>
+
+ <!-- Backend project -->
+        <section class="over-backend">
+            <h1 class="backend-heading">Backend Projects</h1>
+            <div class="backend-parent">
+                <div class="backend-child">
+                    <p>Project Name : <strong>Human Expensive Tracter</strong></p>
+                    <p>Technologies Used : <strong>Python with Sql</strong></p>
+                    <img class="back-img" src="Expense-Tracker-App-UI-Kit-Graphics-44366750-1.jpg" alt="image">
+                    <div class="btn11">
+                <button  class="viwe" onclick="button()">View Project</button>
+                <button class="git-btn">Git Code</button>
+            </div>
+                </div>
+                <!-- 2nd project -->
+                <div class="backend-child">
+                    <p>Project Name : <strong>ATM Similator</strong></p>
+                    <p>Technologies Used : <strong>Python with Sql</strong></p>
+                    <img class="back-img1" src="ATM.jpg" alt="image" style="width: 350px; text-align: center; margin-left: 2%;
+                     margin-top: 20px; border-radius: 5px;" >
+                    <div class="btn11">
+                <button  class="viwe" onclick="button()">View Project</button>
+                <button class="git-btn">Git Code</button>
+            </div>
+                </div>
+
+                <!-- 3rd project -->
+                <div class="backend-child">
+                    <p>Project Name : <strong>E-commerce Backend</strong></p>
+                    <p>Technologies Used : <strong>Python with Sql</strong></p>
+                    <img class="back-img" src="back.jpg" alt="image" style="width: 400px; margin-left: 0%; border-radius: 5px; border: solid 1px; ">
+                    <div class="btn11">
+                <button  class="viwe" onclick="button()">View Project</button>
+                <button class="git-btn">Git Code</button>
+            </div>
+                </div>
+        </section>
+        <div class="home-button">
+              <button class="home-btn"><a class="anger" href="Day15.html">BACK TO HOME</a></button>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+   
+    const navbar = document.querySelector(".side-navbar-parent")
+    const buttons = document.querySelector(".view")
+    //create two function
+    const Showenavbar = () =>{
+        navbar.style.left = "0"
+    }
+    const Closenavbar = () => {
+        navbar.style.left = "-120%"  
+    }
+    const button = ()=>{
+       const buttons = window.location.href = "https://skfolder.netlify.app/";
+    }
+</script>
+</body>
