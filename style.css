@@ -1,0 +1,443 @@
+* {
+   padding: 0;
+   margin: 0;
+
+}
+
+.cookpad {
+   background-color: white;
+   overflow: hidden;
+   position: sticky;
+   top: 0;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+.cookpad-links {
+   display: flex;
+   column-gap: 20px;
+}
+
+.cookpad-link a {
+   text-decoration: none;
+   color: black;
+}
+
+.cookpad-link a:hover {
+   color: orange;
+   text-decoration: underline;
+}
+
+.cooked-menu-toggle {
+   display: none;
+}
+
+.side-navbar {
+   background-color: black;
+   width: 50%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: -60%;
+   padding: 20px;
+   color: white;
+   transition: 2s;
+   display: block;
+
+}
+
+.side-navbar-link {
+   margin-bottom: 30px;
+}
+
+.side.navbar.link a {
+   text-decoration: none;
+   color: white;
+}
+
+.side-navbar-links a:hover {
+   cursor: pointer;
+}
+
+/*search box*/
+input {
+   width: 60%;
+   padding: 15px;
+}
+
+.search-box {
+   padding-top: 20px;
+   text-align: center;
+}
+
+/*Header*/
+.header {
+   display: flex;
+   justify-content: center;
+   padding: 50px;
+   gap: 50px;
+   justify-content: space-around;
+   border-radius: 5px;
+   background-color: rgb(109, 115, 120);
+   padding: 10px;
+   width: fit-content;
+   margin-left: 170px;
+
+}
+
+.header-1 {
+   padding-top: 10%;
+}
+
+.header-button {
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-top: 10px;
+   background-color: orange;
+   color: black;
+   cursor: pointer;
+}
+
+/*Header-one*/
+.header-one {
+   display: flex;
+   justify-content: center;
+   padding: 50px;
+   gap: 50px;
+   justify-content: space-around;
+   border-radius: 5px;
+   background-color: none;
+   width: fit-content;
+   margin-left: 170px;
+
+}
+
+.header-button-one {
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-bottom: 10px;
+   margin-top: 10px;
+   background-color: orange;
+   cursor: pointer;
+}
+
+.header-one-w {
+   padding-top: 20%;
+}
+
+.header-two {
+   display: flex;
+   justify-content: center;
+   padding: 50px;
+   gap: 50px;
+   justify-content: space-around;
+   border-radius: 5px;
+   background-color: rgb(109, 115, 120);
+   width: fit-content;
+   margin-left: 170px;
+
+}
+
+.header-button-two {
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   background-color: orange;
+   cursor: pointer;
+}
+
+.header-image-two {
+   width: 200px;
+}
+
+.header-two-w {
+   padding-top: 10%;
+}
+
+.header-three {
+   display: flex;
+   justify-content: center;
+   padding: 50px;
+   gap: 50px;
+   justify-content: space-around;
+   border-radius: 5px;
+   background-color: whitesmoke;
+   width: fit-content;
+   margin-left: 170px;
+   padding-bottom: 10px;
+   left: 2%;
+   margin-top: 4%;
+
+
+
+}
+
+.header-three-w {
+   display: flex;
+   justify-content: center;
+   padding: 50px;
+   gap: 50px;
+   justify-content: space-around;
+   border-radius: 5px;
+   background-color: whitesmoke;
+   width: fit-content;
+   margin-left: 170px;
+   left: 19%;
+   margin-top: 20px;
+}
+
+.last-button {
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   background-color: orange;
+   cursor: pointer;
+   left: 35%;
+}
+
+.about {
+   display: flex;
+   justify-content: center;
+   padding: 50px;
+   gap: 50px;
+   justify-content: space-around;
+   border-radius: 5px;
+   background-color: black;
+   color: white;
+   width: fit-content;
+   margin: left -5px;
+   padding-bottom: 120px;
+   left: 2%;
+   margin-top: 4%
+}
+
+.social-media-header {
+   text-align: center;
+}
+
+.social-media {
+   text-align: center;
+
+}
+
+.h-header {
+   text-align: center;
+}
+
+.food-search {
+   width: 50%;
+   border: solid black 2px;
+   border-radius: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   margin: auto;
+   padding-top: 10px;
+}
+
+.food-search input {
+   border: none;
+   background-color: transparent;
+   width: 100%;
+}
+
+.food-search input:focus {
+   outline: none;
+}
+
+.recipe {
+   padding: 20px;
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   flex-basis: 15px;
+}
+
+.food-box {
+   text-align: center;
+   flex-wrap: wrap;
+}
+
+.share-1 {
+   text-align: center;
+   padding-top: 20px;
+   background-color: whitesmoke;
+   padding-left: 5%;
+   border-radius: 5px;
+   padding-bottom: 50px;
+}
+
+.share-button {
+   padding-right: 20px;
+   padding-left: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   background-color: black;
+   color: white;
+   z-index: 2px;
+   border-radius: 2px;
+   cursor: pointer;
+}
+
+.share-2 {
+   padding: 20px;
+   padding-left: 20%;
+   margin-top: 30px;
+
+
+}
+
+.share-3 {
+   padding: 20px;
+   padding-left: 47%;
+   border-bottom: 40px;
+}
+
+.pre {
+   text-align: center;
+}
+
+.back-color {
+   background-color: rgba(255, 242, 0, 0.267);
+}
+
+.para {
+   display: list-item;
+   text-align: center;
+   --tw-border-spacing-x: 0;
+   --tw-border-spacing-y: 0;
+   --tw-translate-x: 0;
+   --tw-translate-y: 0;
+   --tw-rotate: 0;
+   --tw-skew-x: 0;
+   --tw-skew-y: 0;
+   --tw-scale-x: 1;
+   --tw-scale-y: 1;
+   --tw-pan-x: ;
+   --tw-pan-y: ;
+   --tw-pinch-zoom: ;
+   --tw-scroll-snap-strictness: proximity;
+   --tw-gradient-from-position: ;
+   --tw-gradient-via-position: ;
+   --tw-gradient-to-position: ;
+   --tw-ordinal: ;
+   --tw-slashed-zero: ;
+   --tw-numeric-figure: ;
+   --tw-numeric-spacing: ;
+   --tw-numeric-fraction: ;
+   --tw-ring-inset: ;
+   --tw-ring-offset-width: 0px;
+   --tw-ring-offset-color: #fff;
+   --tw-ring-color: #3b82f680;
+   --tw-ring-offset-shadow: 0 0 #0000;
+   --tw-ring-shadow: 0 0 #0000;
+   --tw-shadow: 0 0 #0000;
+   --tw-shadow-colored: 0 0 #0000;
+   --tw-blur: ;
+   --tw-brightness: ;
+   --tw-contrast: ;
+   --tw-grayscale: ;
+   --tw-hue-rotate: ;
+   --tw-invert: ;
+   --tw-saturate: ;
+   --tw-sepia: ;
+   --tw-drop-shadow: ;
+   --tw-backdrop-blur: ;
+   --tw-backdrop-brightness: ;
+   --tw-backdrop-contrast: ;
+   --tw-backdrop-grayscale: ;
+   --tw-backdrop-hue-rotate: ;
+   --tw-backdrop-invert: ;
+   --tw-backdrop-opacity: ;
+   --tw-backdrop-saturate: ;
+   --tw-backdrop-sepia: ;
+   --tw-contain-size: ;
+   --tw-contain-layout: ;
+   --tw-contain-paint: ;
+   --tw-contain-style: ;
+}
+
+.big-button {
+   padding: 30px;
+   border-color: black;
+   border-width: 5px;
+   border-style: solid;
+   text-align: center;
+   margin-top: 25px;
+   cursor: pointer;
+}
+
+.small-para {
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+.top-button {
+   text-align: center;
+}
+
+.sub-button {
+   padding-right: 20%;
+   padding-left: 20%;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-top: 10px;
+   background-color: rgba(255, 170, 0, 0.751);
+   cursor: pointer;
+   text-align: center;
+
+}
+
+.pre-1 {
+   padding: 30px;
+   text-align: center;
+   cursor: pointer;
+}
+
+.gpt {
+   text-align: center;
+}
+
+.last-img {
+   padding-top: 80px;
+   text-align: center;
+}
+
+/*Media Query*/
+@media screen and (max-width:700px) {
+   .cooked-menu-toggle {
+      display: block;
+   }
+
+   .cookpad-links {
+      display: none;
+   }
+
+   .header-image {
+      display: block;
+   }
+
+
+
+
+}
