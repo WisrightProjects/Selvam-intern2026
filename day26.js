@@ -1262,5 +1262,233 @@
 // Letters.sort()
 // console.log(Letters)
 
+// create a function 
+// let listers = [1,2,3,4,5]
+// console.log(listers.length)
+// console.log(listers.concat(2))
+// console.log(listers.indexOf(1))
 
+// API & Promises concept code
+// GET Method
+// async function Getdata(){
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//     try{
+//         if(response.ok){
+//             throw new Error("Requist Failer");
+            
+//         }
+//         const data = await response.json();
+//         console.log(data);
+//     }
+//     catch(error){
+//         console.log(error)
+//     }
+// }
+// Getdata()
 
+// arrow function with get method
+// const Getdata = async ()=>{
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users")
+//     try{
+//         if(!response.ok){
+//             throw new Error("Requist Failer")
+//         }
+//          const data = await response.json();
+//          console.log(data);
+//     }
+//     catch(error){
+//         console.log(error)
+//     }
+// }
+// Getdata()
+// Get Mthod Code
+// const Getting = async () => {
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users/12")
+//   try{
+//     if(!response.ok){
+//       throw new Error("Something want Wroung")
+//     }
+//     const data = await response.json()
+//     console.log(data)
+//   }
+//   catch(error){
+//     console.log(error)
+//   }
+// }
+// Getting()
+// Get Method
+// const Getter = async()=>{
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
+//   try{
+//     if(!response.ok){
+//       throw new Error("Requst Failer")
+//     }
+//     const data = await response.json()
+//     console.log(data)
+//   }
+//   catch(error){
+//     console.log(error)
+//   }
+// }
+// Getter()
+
+// Get Method Again One time 
+// const Getters = async()=>{
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users/5")
+//   try{
+//     if(!response.ok){
+//       throw new Error("Something want wroung")
+//     }
+//     const data = await response.json()
+//     console.log(data)
+//   }
+//   catch(error){
+//     console.log(error)
+//   }
+// }
+// Getters()
+// Post Method with aync function
+
+// const Postdata = async ()=>{
+//     const users = {
+//        id : 1,
+//        name : "Selvam",
+//        age : 23,
+//        Department : "MCA"
+//     }
+// //     // Post method syntax
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users",
+//         {
+//             method : "POST",
+//             headers: {
+//         "Content-Type": "application/json"
+//       },
+//             body : JSON.stringify(users)
+//         }
+//     );
+//     const data = await response.json();
+//     console.log(data)
+// }
+// Postdata()
+
+// Post Method Merge OLD API I inside
+// const Posting = async()=>{
+//   const users = {
+//     id : 12,
+//     name : "Selvam Sakthivel",
+//     age : 22 , 
+//     location : "Kallakurichi",
+//     Department : "MCA"
+//   }
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users/12",
+//     {
+//       method : "POST",
+//       header : {
+//         "Content-Type" : "Application/json"
+//       },
+//       body : JSON.stringify(users)
+//     }
+//   );
+//   const data = await response.json()
+//   console.log(data)
+// }
+// Posting()
+
+// The correct POST Method Code
+// const Posting = async () => {
+//   const users = {
+//     id: 12,
+//     name: "Selvam Sakthivel",
+//     age: 22,
+//     location: "Kallakurichi",
+//     Department: "MCA"
+//   };
+
+//   const response = await fetch(
+//     "https://jsonplaceholder.typicode.com/users",
+//     {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify(users)
+//     }
+//   );
+
+//   const data = await response.json();
+//   console.log(data);
+// };
+
+// Posting();
+// async function createUser() {
+//   const user = {
+//     name: "selvam",
+//     email: "selvam@example.com",
+//     location : "Chennai",
+//     department : "MCA"
+//   };
+
+//   const response = await fetch(
+//     "https://jsonplaceholder.typicode.com/users",
+//     {
+//       method: "PUT",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify(user)
+//     }
+//   );
+
+//   const data = await response.json();
+//   console.log(data);
+// }
+
+// createUser();
+
+// // Delete Method
+// async function Deletedata(){
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users",
+//        {
+//         method : "DELETE"
+//        }
+//     );
+//     console.log("Deleted : ", response.ok)
+// }
+// Deletedata()
+
+// async function deleteUser() {
+//   const response = await fetch(
+//     "https://jsonplaceholder.typicode.com/users/1",
+//     {
+//       method: "DELETE"
+//     }
+//   );
+
+//   console.log("Deleted:", response.ok);
+// }
+
+// deleteUser();
+
+// HTTP Method and API
+
+// Both Are Merge and how to i see my detailse
+const mergeUsers = async () =>{
+     const users = {
+    name: "selvam",
+    email: "selvam@example.com",
+    location : "Chennai",
+    department : "MCA"
+  };
+  const response = await fetch("https://jsonplaceholder.typicode.com/users",
+    {
+      method : "POST",
+      headers : {
+        "Content-Type" : "Application/json"
+      },
+      body : JSON.stringify(users)
+    }
+  );
+  const data = response.json()
+  console.log(data)
+}
+mergeUsers()
